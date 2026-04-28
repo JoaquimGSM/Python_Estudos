@@ -17,7 +17,7 @@ b = float(input('Digite o segundo número que deseja utlizar no seu cálculo:'))
 print()
 
 while True:
-    selecao = input('Digite a operação que deseja realizar\n(soma, sub, mult, div ou sair caso queira teminar seus cálculos): ')
+    selecao = input('Digite a operação que deseja realizar\n(soma, sub, mult, div ou sair caso queira terminar seus cálculos): ')
     print()
     if selecao == 'sair':
         print('Obrigado por testar a minha calculadora! ())._.))')
