@@ -30,8 +30,8 @@ print(minhaLista)
 #Vamos acessar cada elemento pelo índice
 #Toda coleção indexada começa no zero
 
-             0       1         2        3         4
-            -5        -4       -3       -2         -1
+############ 0       1         2        3         4
+############-5        -4       -3       -2         -1
 minhaLista=['café', 'água', 'açucar', 'canela', 'café']
 
 
