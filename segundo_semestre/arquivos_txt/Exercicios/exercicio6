@@ -1,0 +1,34 @@
+try:
+
+    with open('notas.txt', 'r', encoding='utf-8') as arquivo:
+
+        for linha in arquivo:
+
+            dados = linha.strip().split(',')
+
+            rm = dados[0]
+            nome = dados[1]
+
+            nota1 = float(dados[2])
+            nota2 = float(dados[3])
+            nota3 = float(dados[4])
+            nota4 = float(dados[5])
+
+            media = (nota1 + nota2 + nota3 + nota4) / 4
+
+            print(f'RM: {rm}')
+            print(f'Aluno: {nome}')
+            print(f'Média: {media:.2f}')
+            print('-------------------------')
+
+except FileNotFoundError:
+    print("Erro: o arquivo 'notas.txt' não foi encontrado.")
+
+except ValueError:
+    print('Erro: alguma nota possui um valor inválido.')
+
+except IndexError:
+    print('Erro: alguma linha do arquivo está incompleta.')
+
+except Exception as erro:
+    print(f'Ocorreu um erro: {erro}')

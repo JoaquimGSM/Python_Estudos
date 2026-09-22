@@ -1,0 +1,19 @@
+try:
+    soma = 0
+
+    with open('numeros.txt', 'r', encoding='utf-8') as arquivo:
+
+        for linha in arquivo:
+            numero = int(linha.strip())
+            soma += numero
+
+    print(f'Somatório dos números: {soma}')
+
+except FileNotFoundError:
+    print("Erro: o arquivo 'numeros.txt' não foi encontrado.")
+
+except ValueError:
+    print('Erro: o arquivo possui algum valor que não é um número inteiro.')
+
+except Exception as erro:
+    print(f'Ocorreu um erro: {erro}')

@@ -1,0 +1,14 @@
+try:
+    with open('numeros.txt', 'w', encoding='utf-8') as arquivo:
+
+        for i in range(10):
+            numero = int(input(f'Digite o {i + 1}º número inteiro: '))
+            arquivo.write(f'{numero}\n')
+
+    print('Números gravados com sucesso!')
+
+except ValueError:
+    print('Erro: digite apenas números inteiros.')
+
+except Exception as erro:
+    print(f'Ocorreu um erro: {erro}')

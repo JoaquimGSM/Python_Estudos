@@ -1,0 +1,25 @@
+try:
+
+    with open('pares.txt', 'w', encoding='utf-8') as arquivo_pares, \
+         open('impares.txt', 'w', encoding='utf-8') as arquivo_impares:
+
+        while True:
+
+            numero = int(input('Digite um número inteiro (0 para encerrar): '))
+
+            if numero == 0:
+                break
+
+            if numero % 2 == 0:
+                arquivo_pares.write(f'{numero}\n')
+
+            else:
+                arquivo_impares.write(f'{numero}\n')
+
+    print('Números armazenados com sucesso!')
+
+except ValueError:
+    print('Erro: digite apenas números inteiros.')
+
+except Exception as erro:
+    print(f'Ocorreu um erro: {erro}')

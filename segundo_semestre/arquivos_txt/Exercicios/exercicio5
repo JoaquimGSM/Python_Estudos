@@ -1,0 +1,31 @@
+try:
+
+    numeros = []
+
+    with open('pares.txt', 'r', encoding='utf-8') as arquivo_pares:
+
+        for linha in arquivo_pares:
+            numeros.append(int(linha.strip()))
+
+    with open('impares.txt', 'r', encoding='utf-8') as arquivo_impares:
+
+        for linha in arquivo_impares:
+            numeros.append(int(linha.strip()))
+
+    numeros.sort()
+
+    with open('numeros_ordenados.txt', 'w', encoding='utf-8') as arquivo:
+
+        for numero in numeros:
+            arquivo.write(f'{numero}\n')
+
+    print('Arquivo numeros_ordenados.txt criado com sucesso!')
+
+except FileNotFoundError:
+    print('Erro: um dos arquivos não foi encontrado.')
+
+except ValueError:
+    print('Erro: existe um valor inválido dentro de um dos arquivos.')
+
+except Exception as erro:
+    print(f'Ocorreu um erro: {erro}')
