@@ -63,7 +63,7 @@ try:
     
     dados = resposta.json()
     if len(dados) > 0:
-        imagem = dados[-1]
+        imagem = dados[0]
 
     print(f'Título: {imagem["title"]}')
     print(f'Data: {imagem["date"]}')
